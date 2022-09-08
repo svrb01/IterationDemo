@@ -1,0 +1,23 @@
+class Program
+    {
+        // code that iterates in multiples of A until X, then in multiples of A + 1 until 2X, then multiples of A + 2 until 3X
+
+
+        public static int Iterate(int A, int X)
+        {
+            int j = 1;
+            int iteration = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                iteration = (A + i) * ((i + j)* X);
+            }
+            return iteration;
+        }
+        static void Main(string[] args)
+        {
+            int A = 1, X = 10;
+            int code = Iterate(A, X);
+            Console.WriteLine($"Multiples of A until X is {code}");
+            Console.ReadLine();
+        }
+    }
